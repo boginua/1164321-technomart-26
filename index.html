@@ -11,14 +11,13 @@
     <div class="header-main">
       <img class="first-header-logo" src="img/index-logo.png" width="220" height="47" alt="Логотип интернет-магазина Техномарт">
 
-      <!---<img src="img/icon-search.svg">--->
-              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                      <label for="search">Поиск:</label>
-                      <input type="search" id="search" name="search">
-                          <div class="buttons">
-                            <input type="submit" value="Лупа">
-                          </div>
-              </form>
+      <form class="visually-hidden" action="https://echo.htmlacademy.ru" method="post">
+              <label for="search"></label>
+              <input type="search" id="search" name="search" placeholder="Поиск:">
+              <button type="submit" class="search-icon">
+                 <img src="img/icon-search.svg">
+              </button>
+      </form>
 
       <ul class="header-main-links">
         <li><a href="" class="header-main-bookmark"><img src="img/icon-bookmark.svg">Закладки</a> </li>
@@ -85,7 +84,10 @@
   <button class="modal-close" type="button">Закрыть</button>
           </p>
 
-          <p class="text-find-us">Заблудились? Напишите нам</p>
+          <a class="link-find-us">Заблудились? Напишите нам</a>
+
+          <div class="modal-window-find-us">
+
               <form class="form-find-us" action="https://echo.htmlacademy.ru" metod="post">
                 <p class="find-us-item">
                   <label for="user-name"> Ваше имя:</label>
@@ -97,12 +99,14 @@
                 </p>
                 <p class="find-us-item">
                   <label for="user-text">Текст письма:</label>
-                  <input id="user-text" type="text" name="text" value="" placeholder="В свободной форме">
+                  <textarea name="comment" id="user-text"> В свободной форме </textarea>
                 </p>
-
                   <button class="button" type="submit"> Отправить </button>
-                  <button class="modal-close" type="button">Закрыть</button>
           </form>
+
+          <button class="modal-close" type="button">Закрыть</button>
+
+        </div>
 
       </section>
     </div>
