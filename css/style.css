@@ -1,12 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "PT Sans","Arial" sans-serif;
+  font-family: "Cuprum","Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
   background-color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -20,35 +24,30 @@ body {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header-main {
   font-size: 17px;
   background-color: #293449;
 }
 
-.header-main a {
-  color: #ffffff;
-}
-
-.main-header{
+.main-header {
   background-color: #f3f7f8;
-  font-family: "Cuprum","Arial" sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .header-info-description{
   font-style: italic;
   color: #ee3643;
+  font-size: 16px;
 }
 
 .header-info-phone {
   color: #ee3643;
   font-size: 21px;
+  border-color: #ffffff;
+  border-style: solid;
 }
 
-.header-info-adress{
+.header-info-adress {
   color: #32425c;
   font-size: 14px;
 }
@@ -76,6 +75,8 @@ a {
 
 .header-main-item {
   background-color: #293449;
+  color: #ffffff;
+  font-size: 17px;
 }
 
 .header-main-item:hover {
@@ -87,6 +88,21 @@ a {
 }
 .header-main-links, .header-profile-list {
   list-style: none;
+}
+
+.header-main-order {
+  background-color: #63a63e;
+  color: #ffffff;
+  font-size: 17px;
+  }
+
+.header-main-order:hover {
+  background-color: #5fbb2d;
+}
+
+.header-main-order:active {
+  background-color: #518534;
+  color: #a2be93;
 }
 
 .header-profile-links {
@@ -105,17 +121,8 @@ a {
   list-style: none;
 }
 
-.header-main-order {
-  background-color: #63a63e;
-}
-
-.header-main-order:hover {
-  background-color: #5fbb2d;
-}
-
-.header-main-order:active {
-  background-color: #518534;
-  color: #a2be93;
+.site-navigation-list {
+  list-style: none;
 }
 
 .navigation {
@@ -138,26 +145,26 @@ a {
   background-color: #f4f7f9;
 }
 
-.company-info h2{
+.company-info-title{
   font-size: 30px;
   text-transform: uppercase;
 }
 
-.company-info p{
+.company-info-text {
   font-size: 13px;
-  font-family: "PT Sans","Arial" sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .delivery-list {
   list-style: none;
 }
 
-.contacts-text-map h2{
+.contacts-map-title {
   font-size: 30px;
   text-transform: uppercase;
 }
 
-.contacts-text-map p{
+.contacts-map-text {
   font-size: 13px;
 }
 
@@ -171,11 +178,8 @@ a {
   text-align: center;
   color: #000000;
   background-color: #ffffff;
-}
-
-.visually-hidden, h2 {
-  background-color: #f2f6f8;
-  color: #32425c;
+  border-style: solid;
+  border-color: #c5c5c5;
 }
 
 .breadcrumbs {
@@ -186,42 +190,52 @@ a {
 .filters-catalog {
   text-transform: uppercase;
   font-size: 17px;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .filter-catalog-title {
-  font-style: bold;
+  font-weight: bold;
 }
 
 .manufacturers-list, .power-list {
   list-style: none;
 }
 
+.catalog-item {
+  border-color: #c5c5c5;
+  border-style: solid;
+}
 .catalog-list {
   list-style: none;
 }
 
-.catalog-products p {
-  font-style: bold;
-}
-
-.catalog-products {
-  font-style: bold;
+.product-name {
+  font-weight: bold;
   font-size: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .strike {
   color: #999999;
   text-decoration: line-through;
+  font-size: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: bold;
 }
 
 .primary-block {
   color: #FFFFFF;
   background-color: #ee3643;
+  font-size: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: bold;
 }
 
 .button-add-to-cart {
   color: #FFFFFF;
   background-color: #63a63e;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .button-add-to-cart:hover {
@@ -235,6 +249,8 @@ a {
   color: #32425c;
   border-color: #63a63e;
   border-style: solid;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .button-add-to-bookmark:hover {
@@ -255,10 +271,13 @@ a {
 .footer-catalog-content {
   font-size: 18px;
   background-color: #293449;
+}
+
+.footer-page-link {
   color: #ffffff;
 }
 
-.footer-page-content a{
+.footer-catalog-text {
   color: #ffffff;
 }
 
@@ -266,7 +285,7 @@ a {
   list-style: none;
 }
 
-.footer-catalog-content a {
+.footer-catalog-link {
   color: #ffd180;
 }
 .footer-list-copyright {
@@ -274,7 +293,10 @@ a {
   background-color: #293449;
 }
 
-.footer-list-copyright p{
+.footer-copyright-text {
+  color: #ffffff;
+}
+.footer-text-copyright {
   color: #ffffff;
 }
 
@@ -284,4 +306,12 @@ a {
 
 .footer-copyright {
   color: #ffd180;
+}
+
+.modal-window-find-us, .map {
+  display: none;
+}
+
+.modal-window {
+  display: none;
 }
