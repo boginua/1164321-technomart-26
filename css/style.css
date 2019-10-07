@@ -1,3 +1,24 @@
+@keyframes arrive {
+  0%{
+            transform: translate(-50%, -1000px);
+  }
+  90%{
+            transform: translate(-50%, 10px);
+  }
+  100%{        
+            transform: translate(-50%, 0);
+  }
+}
+@keyframes stress {
+  50% {
+     transform: translate(-45%, 0);
+  }
+
+  100% {
+     transform: translate(-55%, 0);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -2194,6 +2215,11 @@ z-index: 1;
 
 .modal-window-show, .modal-window-find-us-show {
   display: block;
+  animation: arrive 0.4s;
+}
+
+.modal-window-find-us-error {
+  animation: stress 0.02s;
 }
 
 .modal-window-text {

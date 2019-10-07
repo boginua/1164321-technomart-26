@@ -1,25 +1,44 @@
 var modalFindUs = document.querySelector('.modal-window-find-us');
 if (modalFindUs) {
 	var modalFindUsClose = modalFindUs.querySelector('.modal-close');
+	var modalName = modalFindUs.querySelector('.find-us-item-input-name');
+	var modalMail = modalFindUs.querySelector('.find-us-item-input-mail');
+	var modalText = modalFindUs.querySelector('.find-us-item-tarea');
 }
 var findUsButton = document.querySelector('.open-find-us');
 if (findUsButton) {
 	findUsButton.addEventListener('click', function(evt){
 		evt.preventDefault();
 		modalFindUs.classList.add("modal-window-find-us-show");
+		modalName.focus();
 
 		modalFindUsClose.addEventListener('click', function(evtClose){
 			evtClose.preventDefault();
 			modalFindUs.classList.remove("modal-window-find-us-show");
+			modalFindUs.classList.remove('modal-window-find-us-error');
 		});
 		window.addEventListener('keydown', function(evtKey){
 			if (evtKey.keyCode === 27) {
 				evtKey.preventDefault();
 				modalFindUs.classList.remove('modal-window-find-us-show');
+				modalFindUs.classList.remove('modal-window-find-us-error');
 			}
 		});
 	});
 }
+
+
+modalFindUs.addEventListener('submit', function(evt){
+
+	if (!modalName.value || !modalMail.value || !modalText.value) {
+		evt.preventDefault();
+		modalFindUs.classList.remove('modal-window-find-us-error');
+		modalFindUs.offsetWidth = modalFindUs.offsetWidth;
+		modalFindUs.classList.add('modal-window-find-us-error');
+	}
+});
+
+
 
 var mapButton = document.querySelector('.contacts-map-link');
 var modalMap = document.querySelector('.modal-map');
