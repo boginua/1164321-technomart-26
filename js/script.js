@@ -4,6 +4,17 @@ if (modalFindUs) {
 	var modalName = modalFindUs.querySelector('.find-us-item-input-name');
 	var modalMail = modalFindUs.querySelector('.find-us-item-input-mail');
 	var modalText = modalFindUs.querySelector('.find-us-item-tarea');
+
+
+	modalFindUs.addEventListener('submit', function(evt){
+
+		if (!modalName.value || !modalMail.value || !modalText.value) {
+			evt.preventDefault();
+			modalFindUs.classList.remove('modal-window-find-us-error');
+			modalFindUs.offsetWidth = modalFindUs.offsetWidth;
+			modalFindUs.classList.add('modal-window-find-us-error');
+		}
+	});
 }
 var findUsButton = document.querySelector('.open-find-us');
 if (findUsButton) {
@@ -28,25 +39,20 @@ if (findUsButton) {
 }
 
 
-modalFindUs.addEventListener('submit', function(evt){
 
-	if (!modalName.value || !modalMail.value || !modalText.value) {
-		evt.preventDefault();
-		modalFindUs.classList.remove('modal-window-find-us-error');
-		modalFindUs.offsetWidth = modalFindUs.offsetWidth;
-		modalFindUs.classList.add('modal-window-find-us-error');
-	}
-});
 
 
 
 var mapButton = document.querySelector('.contacts-map-link');
+
 var modalMap = document.querySelector('.modal-map');
 if (modalMap) {
 	var modalMapClose = modalMap.querySelector('.modal-close');
 }
 if (mapButton) {
+
 	mapButton.addEventListener('click', function(evt){
+
 		evt.preventDefault();
 		modalMap.classList.add('modal-map-show');
 

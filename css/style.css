@@ -714,6 +714,7 @@ a {
 .servises-content {
   margin: 0;
   padding: 0;
+  width: 370px;
   margin-bottom: 30px;
   font-size: 13px;
   font-family:"PT Sans",Arial,sans-serif;
@@ -805,7 +806,7 @@ a {
   display: inline-block;
   width: 300px;
   height: 158px;
-
+  position: absolute;
 }
 
 .contacts-map-image {
@@ -1272,7 +1273,6 @@ a {
 }
 
 .footer-copyright-container:last-of-type .footer-copyright-text:first-of-type{
-  margin-left: auto;
   margin-right: 50px;
 }
 
@@ -1714,6 +1714,7 @@ z-index: 1;
 
 .offer-slider-button {
   background-image: url('../img/icon-left.svg');
+  cursor: pointer;
 }
 
 .header-main-container {
